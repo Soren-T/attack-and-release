@@ -1,6 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import pic02 from '../../images/pic02.jpg'
+import React from 'react';
+import kfgm from '../../images/kfgm.jpg';
 
 const Podcast = ({ close, article, timeout }) => (
   <article
@@ -10,25 +9,23 @@ const Podcast = ({ close, article, timeout }) => (
     }`}
     style={{ display: 'none' }}
   >
-    <h2 className="major">Podcast</h2>
-    <span className="image main">
-      <img src={pic02} alt="" />
-    </span>
-    <p>
-      Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-      at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-      urna nisi, fringila lorem et vehicula lacinia quam. Integer
-      sollicitudin mauris nec lorem luctus ultrices.
-    </p>
-    <p>
-      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-      libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-      Pellentesque condimentum sem. In efficitur ligula tate urna.
-      Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-      Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-      libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-      tempus.
-    </p>
+    <h2 className="major">
+      Podcast:
+    </h2>    
+    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+      <div style={{width: '45%'}}>
+        <h3>KFGM Ballroom Sessions</h3>
+        <p>
+          Matt Olson recorded, produced and hosted the KFGM Ballroom Sessions 
+          staged at the Union Hall theater. The program brought in Montana 
+          bands as well as local familiar voices to host interview segments.
+        </p>
+        <a href="https://archive.org/details/@kfgm_ballroom_sessions">
+          listen here
+        </a>
+      </div>
+      <img style={{ width: "45%", height: "auto" }} src={kfgm} alt="kfgm" />
+    </div>
     {close}
   </article>
 )

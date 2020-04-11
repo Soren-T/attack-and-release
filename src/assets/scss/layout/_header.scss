@@ -62,25 +62,11 @@
     }
   }
 
-  .logo {
-    width: 5.5rem;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    border: solid _size(border-width) _palette(border);
-    border-radius: 100%;
-
-    .icon {
-      &:before {
-        font-size: 2rem;
-      }
-    }
-  }
-
   .content {
-    border-style: solid;
-    border-color: _palette(border);
-    border-top-width: _size(border-width);
-    border-bottom-width: _size(border-width);
+    // border-style: solid;
+    // border-color: _palette(border);
+    // border-width: _size(border-width);
+    text-align: center;
     max-width: 100%;
 
     .inner {
@@ -93,12 +79,32 @@
         )
       );
       @include vendor('transition-delay', '0.25s');
-      padding: 3rem 2rem;
+      padding: 1rem 2rem;
       max-height: 40rem;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px !important;
+      background-color: transparentize(_palette(bg), 0.15);
 
       > :last-child {
         margin-bottom: 0;
+      }
+
+      .logo {
+        width: 5.5rem;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        border: solid _size(border-width) _palette(border);
+        border-radius: 100%;
+        align-self: center;
+        margin-bottom: 1rem;
+    
+        .icon {
+          &:before {
+            font-size: 2rem;
+          }
+        }
       }
     }
 

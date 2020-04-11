@@ -32,6 +32,14 @@
 			border-radius: _size(border-radius);
 			opacity: 0;
 
+			.content {
+				display: flex;
+				flex-direction: column;
+				.center {
+					align-self: center;
+				}
+			}
+
 			&.timeout {
 				display: none;
 			}

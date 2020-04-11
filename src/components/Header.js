@@ -1,16 +1,19 @@
-import PropTypes from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types';
+import React from 'react';
+import logo from '../images/logo.png';
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-    <div className="logo">
-      <span className="icon fa-diamond"></span>
-    </div>
     <div className="content">
-      <div className="inner">
+      <div className="inner">        
+        <div className="logo">
+          <span className="icon">
+            <img src={logo} alt="logo" />
+          </span>
+        </div>
         <h1>Attack &amp; Release Sound &amp; Studio</h1>
         <p>
-          Produced by Matt Olsen
+          Produced by Matt Olson
         </p>
       </div>
     </div>

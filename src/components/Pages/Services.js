@@ -1,6 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import pic02 from '../../images/pic02.jpg'
+import React from 'react';
+import studio2 from '../../images/studio2.jpg';
 
 const Services = ({ close, article, timeout }) => (
   <article
@@ -8,28 +7,23 @@ const Services = ({ close, article, timeout }) => (
     className={`${article === 'services' ? 'active' : ''} ${
       timeout ? 'timeout' : ''
     }`}
-    style={{ display: 'none' }}
-  >
+    style={{ display: 'none' }}>
     <h2 className="major">Services</h2>
-    <span className="image main">
-      <img src={pic02} alt="" />
+    <ul>
+      <li>        
+        Live Sound
+      </li>
+      <li>        
+        Studio Recording
+      </li>
+      <li>        
+        Mixing
+      </li>
+    </ul>
+    <span className="image main content">
+      <img src={studio2} alt="studio2" />
     </span>
-    <p>
-      Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-      at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-      urna nisi, fringila lorem et vehicula lacinia quam. Integer
-      sollicitudin mauris nec lorem luctus ultrices.
-    </p>
-    <p>
-      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-      libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-      Pellentesque condimentum sem. In efficitur ligula tate urna.
-      Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-      Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-      libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-      tempus.
-    </p>
-    {close}
+    {close} 
   </article>
 )
 

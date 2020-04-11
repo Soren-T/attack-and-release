@@ -1,6 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import pic03 from '../../images/pic03.jpg'
+import React from 'react';
+import matt from '../../images/matt.jpg';
 
 const About = ({ close, article, timeout }) => (
   <article
@@ -11,18 +10,17 @@ const About = ({ close, article, timeout }) => (
     style={{ display: 'none' }}
   >
     <h2 className="major">About</h2>
-    <span className="image main">
-      <img src={pic03} alt="" />
-    </span>
     <p>
-      Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-      eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-      erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-      lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-      Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-      Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-      amet.
+      Matt Olson has been a part of the Montana music scene for many years.
+      You can catch him doing sound around many venues in the area. 
+      He has experience live streaming to radio, podcast recording and editing, 
+      recording a live music set or editing and producing a full length album. 
+      Some of his notable accomplishments are doing sound for The Moth radio hour at the Wilma, 
+      Live Streaming the Butte Folk Festival and Producing, recording and editing the KFGM ballroom sessions. 
     </p>
+    <span className="image main">
+      <img src={matt} alt="matt" />
+    </span>
     {close}
   </article>
 )

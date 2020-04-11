@@ -1,5 +1,17 @@
 import React from 'react'
 
+const metaphors = [
+  'audio gold',
+  'Montana summer',
+  'a million bucks',
+  'Frank Sinatra and Miley Cyrus had a baby'
+];
+
+const getMetaphor = () => {
+  let randomInt = Math.floor(Math.random() * Math.floor(4));
+  return metaphors[randomInt];
+}
+
 const Schedule = ({ close, article, timeout }) => (
   <article
     id="schedule"
@@ -19,46 +31,19 @@ const Schedule = ({ close, article, timeout }) => (
         <input type="text" name="email" id="email" />
       </div>
       <div className="field">
-        <label htmlFor="message">Message</label>
-        <textarea name="message" id="message" rows="4"></textarea>
+        <label htmlFor="body">Message</label>
+        <textarea
+          name="Body"
+          id="body" 
+          rows="4"
+          placeholder={`If you want Matt to make you sound like ${getMetaphor()}, write him a message with your name and phone number...`} />
       </div>
       <ul className="actions">
         <li>
-          <input type="submit" value="Send Message" className="special" />
-        </li>
-        <li>
-          <input type="reset" value="Reset" />
+          <input type="submit" value="Send Email" className="special" />
         </li>
       </ul>
     </form>
-    <ul className="icons">
-      <li>
-        <a
-          href="https://twitter.com/HuntaroSan"
-          className="icon fa-twitter"
-        >
-          <span className="label">Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://codebushi.com" className="icon fa-facebook">
-          <span className="label">Facebook</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://codebushi.com" className="icon fa-instagram">
-          <span className="label">Instagram</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/codebushi/gatsby-starter-dimension"
-          className="icon fa-github"
-        >
-          <span className="label">GitHub</span>
-        </a>
-      </li>
-    </ul>
     {close}
   </article>
 )

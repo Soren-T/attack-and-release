@@ -40,6 +40,22 @@
 				}
 			}
 
+			.video {
+				display: inherit;
+			}
+			.video-list {
+				display: none;
+			}
+
+			@include breakpoint(small) {
+				.video {
+					display: none !important;
+				}
+				.video-list {
+					display: inherit;
+				}
+			}
+
 			.podcast {
 				display: flex;
 				flex-direction: row;

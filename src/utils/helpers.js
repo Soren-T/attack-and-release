@@ -5,11 +5,9 @@ const useWindowSize = () => {
   let h = 0;
   let w = 0;
   if (windowExists) {
-    console.log(window, "WINDOW")
     const { innerHeight, innerWidth } = window;
     [ h, w ] = [ innerHeight, innerWidth];
   }
-  console.log(windowExists, w, h)
   const [width, setWidth] = useState(w);
   const [height, setHeight] = useState(h);
   const handleWindowResize = () => {

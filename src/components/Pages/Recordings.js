@@ -44,6 +44,7 @@ const Recordings = ({ close, article, timeout }) => {
   const { width } = useWindowSize();
   
   const renderLiveRecordings = () => {
+    console.log("recordings", width);
     return width <= 736 ? (
       <ul className="center">
         {liveRecordings.map((r, i) => {

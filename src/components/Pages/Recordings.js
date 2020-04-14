@@ -40,53 +40,54 @@ const liveRecordings = [
   }
 ];
 
-const renderLiveRecordings = (width) => {
-  return width <= 736 ? (
-    <ul className="center">
-      {liveRecordings.map((r, i) => {
-        return (
-          <li key={i}>        
-            <a href={r.link}>{r.title}</a>
-          </li>
-        )
-      })}
-    </ul>
-  ) : (
-    <Carousel
-      className="video"
-      renderCenterLeftControls={({ previousSlide }) => (
-        <button onClick={previousSlide}>
-          <i className="fa fa-chevron-left" />
-        </button>
-      )}
-      renderCenterRightControls={({ nextSlide }) => (
-        <button onClick={nextSlide}>
-          <i className="fa fa-chevron-right"/>
-        </button>
-      )}
-      renderBottomCenterControls={() => null}
-      wrapAround>
-      {liveRecordings.map((r, i) => {
-          return (
-            <div key={i} style={{ display: 'flex', flexDirection: 'column'}}>        
-              <iframe
-                style={{ alignSelf: 'center'}}
-                title={r.title}
-                width="100%"
-                height="360"
-                src={r.link} 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen>      
-              </iframe>
-            </div>
-          )
-        })}
-      </Carousel>
-    );
-  }
-
 const Recordings = ({ close, article, timeout }) => {
   const { width } = useWindowSize();
+  
+  const renderLiveRecordings = () => {
+    return width <= 736 ? (
+      <ul className="center">
+        {liveRecordings.map((r, i) => {
+          return (
+            <li key={i}>        
+              <a href={r.link}>{r.title}</a>
+            </li>
+          )
+        })}
+      </ul>
+    ) : (
+      <Carousel
+        className="video"
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button onClick={previousSlide}>
+            <i className="fa fa-chevron-left" />
+          </button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button onClick={nextSlide}>
+            <i className="fa fa-chevron-right"/>
+          </button>
+        )}
+        renderBottomCenterControls={() => null}
+        wrapAround>
+        {liveRecordings.map((r, i) => {
+            return (
+              <div key={i} style={{ display: 'flex', flexDirection: 'column'}}>        
+                <iframe
+                  style={{ alignSelf: 'center'}}
+                  title={r.title}
+                  width="100%"
+                  height="360"
+                  src={r.link} 
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen>      
+                </iframe>
+              </div>
+            )
+          })}
+        </Carousel>
+      );
+    }
+
   return (
     <article
       id="recordings"
@@ -109,7 +110,7 @@ const Recordings = ({ close, article, timeout }) => {
       </ul>
 
       <h3>Live:</h3>
-      {renderLiveRecordings(width)}
+      {renderLiveRecordings()}
       {close}
     </article>
   );

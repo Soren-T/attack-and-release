@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 
 const useWindowSize = () => {
   const windowExists = typeof window !== `undefined`;
-  console.log(windowExists, window)
+  console.log(windowExists)
   let h = 0;
   let w = 0;
   if (windowExists) {
+    console.log(window, "WINDOW")
     const { innerHeigth, innerWidth } = window;
     [ h, w ] = [ innerHeigth, innerWidth];
   }

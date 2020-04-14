@@ -40,6 +40,20 @@
 				}
 			}
 
+			.podcast {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				
+				>div {
+					width: 45%;
+				}
+				img {
+					width: 45%;
+					height: auto;
+				}
+			}
+
 			&.timeout {
 				display: none;
 			}
@@ -106,6 +120,20 @@
 						width: 2.25rem;
 						height: 2.25rem;
 						background-size: 14px 14px;
+					}
+				}
+				
+				.podcast {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					
+					>div {
+						width: 100%;
+					}
+					img {
+						width: auto;
+						height: auto;
 					}
 				}
 			}

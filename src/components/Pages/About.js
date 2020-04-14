@@ -1,5 +1,5 @@
 import React from 'react';
-import matt from '../../images/matt.jpg';
+import matt2 from '../../images/matt2.jpg';
 
 const About = ({ close, article, timeout }) => (
   <article
@@ -11,15 +11,13 @@ const About = ({ close, article, timeout }) => (
   >
     <h2 className="major">About</h2>
     <p>
-      Matt Olson has been a part of the Montana music scene for many years.
-      You can catch him doing sound around many venues in the area. 
-      He has experience live streaming to radio, podcast recording and editing, 
-      recording a live music set or editing and producing a full length album. 
-      Some of his notable accomplishments are doing sound for The Moth radio hour at the Wilma, 
-      Live Streaming the Butte Folk Festival and Producing, recording and editing the KFGM ballroom sessions. 
+      Matt Olson is a musician, producer, live and recorded audio engineer. 
+      He has been an avid member of the Missoula music scene since 2006. 
+      He has worked with countless bands providing them with opportunities to play, 
+      record, promote and connect to a larger audience.
     </p>
     <span className="image main">
-      <img src={matt} alt="matt" />
+      <img src={matt2} alt="matt" />
     </span>
     {close}
   </article>

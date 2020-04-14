@@ -12,8 +12,8 @@ const Podcast = ({ close, article, timeout }) => (
     <h2 className="major">
       Podcast:
     </h2>    
-    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-      <div style={{width: '45%'}}>
+    <div className="podcast">
+      <div>
         <h3>KFGM Ballroom Sessions</h3>
         <p>
           Matt Olson recorded, produced and hosted the KFGM Ballroom Sessions 
@@ -21,10 +21,10 @@ const Podcast = ({ close, article, timeout }) => (
           bands as well as local familiar voices to host interview segments.
         </p>
         <a href="https://archive.org/details/@kfgm_ballroom_sessions">
-          listen here
+          <h3>listen here</h3>
         </a>
       </div>
-      <img style={{ width: "45%", height: "auto" }} src={kfgm} alt="kfgm" />
+      <img src={kfgm} alt="kfgm" />
     </div>
     {close}
   </article>

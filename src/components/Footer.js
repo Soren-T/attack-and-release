@@ -5,12 +5,20 @@ const Footer = (props) => (
   <footer id="footer" style={props.timeout ? {display: 'none'} : {}}>
     <ul className="icons">
       <li>
-        <a href="https://www.facebook.com/attackandreleasesound/" className="icon fa-facebook">
+        <a 
+          href="https://www.facebook.com/attackandreleasesound/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="icon fa-facebook">
           <span className="label">Facebook</span>
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/attackandreleasesound/?hl=en" className="icon fa-instagram">
+        <a 
+          href="https://www.instagram.com/attackandreleasesound/?hl=en" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="icon fa-instagram">
           <span className="label">Instagram</span>
         </a>
       </li>

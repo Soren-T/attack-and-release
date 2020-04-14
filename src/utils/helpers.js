@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 
 const useWindowSize = () => {
   const windowExists = typeof window !== `undefined`;
-  console.log(windowExists)
   let h = 0;
   let w = 0;
   if (windowExists) {
     console.log(window, "WINDOW")
-    const { innerHeigth, innerWidth } = window;
-    [ h, w ] = [ innerHeigth, innerWidth];
+    const { innerHeight, innerWidth } = window;
+    [ h, w ] = [ innerHeight, innerWidth];
   }
+  console.log(windowExists, w, h)
   const [width, setWidth] = useState(w);
   const [height, setHeight] = useState(h);
   const handleWindowResize = () => {

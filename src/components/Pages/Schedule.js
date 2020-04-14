@@ -43,7 +43,7 @@ const Schedule = ({ close, article, timeout }) => {
     }`}
     style={{ display: 'none' }}>
       <h2 className="major">Schedule</h2>
-      <form action={`mailto:sorenct04@gmail.com?subject=Recording%20for%20${name}&body=${message}`}>
+      <form action={`mailto:matt.d.olson78@gmail.com?subject=Recording%20for%20${name}&body=${message}`}>
         <div className="field half first">
           <label htmlFor="name">Name</label>
           <input type="text" name="name" onChange={handleForm} id="name" />

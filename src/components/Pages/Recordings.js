@@ -1,7 +1,8 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
+import useWindowSize from '../../utils/helpers';
 
-const studioRecordings= [
+const studioRecordings = [
   {
     description: 'Rooster Sauce',
     link: 'https://roostersauce.bandcamp.com/album/live-ep-the-last-days-of-disco-fries'
@@ -20,7 +21,7 @@ const studioRecordings= [
   }
 ];
 
-const liveRecordings= [
+const liveRecordings = [
   {
     title: 'Double Dirty Ocelot - Mad For The Money',
     link: 'https://www.youtube.com/embed/vBIEpiccPBc'
@@ -39,29 +40,20 @@ const liveRecordings= [
   }
 ];
 
-const Recordings = ({ close, article, timeout }) => (
-  <article
-    id="recordings"
-    className={`${article === 'recordings' ? 'active' : ''} ${
-      timeout ? 'timeout' : ''
-    }`}
-    style={{ display: 'none' }}
-  >
-    <h2 className="major">Recordings</h2>
-
-    <h3>Studio:</h3>
+const renderLiveRecordings = (width) => {
+  return width <= 736 ? (
     <ul className="center">
-      {studioRecordings.map((r, i) => {
+      {liveRecordings.map((r, i) => {
         return (
           <li key={i}>        
-            <a href={r.link}>{r.description}</a>
+            <a href={r.link}>{r.title}</a>
           </li>
         )
       })}
     </ul>
-
-    <h3>Live:</h3>
+  ) : (
     <Carousel
+      className="video"
       renderCenterLeftControls={({ previousSlide }) => (
         <button onClick={previousSlide}>
           <i className="fa fa-chevron-left" />
@@ -80,8 +72,8 @@ const Recordings = ({ close, article, timeout }) => (
               <iframe
                 style={{ alignSelf: 'center'}}
                 title={r.title}
-                width="560"
-                height="315"
+                width="100%"
+                height="360"
                 src={r.link} 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>      
@@ -89,9 +81,38 @@ const Recordings = ({ close, article, timeout }) => (
             </div>
           )
         })}
-    </Carousel>
-    {close}
-  </article>
-)
+      </Carousel>
+    );
+  }
+
+const Recordings = ({ close, article, timeout }) => {
+  const { width } = useWindowSize();
+  return (
+    <article
+      id="recordings"
+      className={`${article === 'recordings' ? 'active' : ''} ${
+        timeout ? 'timeout' : ''
+      }`}
+      style={{ display: 'none' }}
+    >
+      <h2 className="major">Recordings</h2>
+
+      <h3>Studio:</h3>
+      <ul className="center">
+        {studioRecordings.map((r, i) => {
+          return (
+            <li key={i}>        
+              <a href={r.link}>{r.description}</a>
+            </li>
+          )
+        })}
+      </ul>
+
+      <h3>Live:</h3>
+      {renderLiveRecordings(width)}
+      {close}
+    </article>
+  );
+}
 
 export default Recordings

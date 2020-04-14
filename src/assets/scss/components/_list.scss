@@ -24,6 +24,10 @@
 		li {
 			padding-left: 0.5em;
 		}
+		
+		&.video {
+			padding-left: 0;
+		}
 
 		&.alt {
 			list-style: none;

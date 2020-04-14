@@ -23,19 +23,23 @@ const studioRecordings = [
 const liveRecordings = [
   {
     title: 'Double Dirty Ocelot - Mad For The Money',
-    link: 'https://www.youtube.com/embed/vBIEpiccPBc'
+    link: "https://www.youtube.com/watch?v=vBIEpiccPBc",
+    embed: 'https://www.youtube.com/embed/vBIEpiccPBc'
   },
   {
     title: 'Ocelot Wizard - Blind',
-    link: 'https://www.youtube.com/embed/ydRuvSv4yXI'
+    link: 'https://www.youtube.com/watch?ydRuvSv4yXI',
+    embed: 'https://www.youtube.com/embed/ydRuvSv4yXI'
   },
   {
     title: 'Jesse, The Ocelot - Grow Faster',
-    link: 'https://www.youtube.com/embed/yM5ShM5Y0Oo'
+    link: 'https://www.youtube.com/watch?yM5ShM5Y0Oo',
+    embed: 'https://www.youtube.com/embed/yM5ShM5Y0Oo'
   },
   {
     title: 'Super Cub - Parlor Sessions',
-    link: 'https://www.youtube.com/embed/w2dpLgg-_Gg'
+    link: 'https://www.youtube.com/watch?w2dpLgg-_Gg',
+    embed: 'https://www.youtube.com/embed/w2dpLgg-_Gg'
   }
 ];
 
@@ -47,7 +51,7 @@ const Recordings = ({ close, article, timeout }) => {
           {liveRecordings.map((r, i) => {
             return (
               <li key={i}>        
-                <a href={r.link}>{r.title}</a>
+                <a href={r.link} target="_blank">{r.title}</a>
               </li>
             )
           })}
@@ -74,7 +78,7 @@ const Recordings = ({ close, article, timeout }) => {
                     title={r.title}
                     width="100%"
                     height="360"
-                    src={r.link} 
+                    src={r.embed} 
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>      
                   </iframe>

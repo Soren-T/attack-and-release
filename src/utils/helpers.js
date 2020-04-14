@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
-const windowExists = typeof window !== `undefined`;
-
 const useWindowSize = () => {
+  const windowExists = typeof window !== `undefined`;
   let h = 0;
   let w = 0;
   if (windowExists) {
@@ -21,7 +20,7 @@ const useWindowSize = () => {
       window.addEventListener("resize", handleWindowResize);
       return () => window.removeEventListener("resize", handleWindowResize);
     }
-  }, []);
+  }, [windowExists]);
 
   return { width, height };
 };

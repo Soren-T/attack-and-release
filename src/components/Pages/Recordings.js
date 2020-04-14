@@ -28,17 +28,17 @@ const liveRecordings = [
   },
   {
     title: 'Ocelot Wizard - Blind',
-    link: 'https://www.youtube.com/watch?ydRuvSv4yXI',
+    link: 'https://www.youtube.com/watch?v=ydRuvSv4yXI',
     embed: 'https://www.youtube.com/embed/ydRuvSv4yXI'
   },
   {
     title: 'Jesse, The Ocelot - Grow Faster',
-    link: 'https://www.youtube.com/watch?yM5ShM5Y0Oo',
+    link: 'https://www.youtube.com/watch?v=yM5ShM5Y0Oo',
     embed: 'https://www.youtube.com/embed/yM5ShM5Y0Oo'
   },
   {
     title: 'Super Cub - Parlor Sessions',
-    link: 'https://www.youtube.com/watch?w2dpLgg-_Gg',
+    link: 'https://www.youtube.com/watch?v=w2dpLgg-_Gg',
     embed: 'https://www.youtube.com/embed/w2dpLgg-_Gg'
   }
 ];

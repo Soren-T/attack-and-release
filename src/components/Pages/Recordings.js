@@ -3,20 +3,56 @@ import Carousel from 'nuka-carousel';
 
 const studioRecordings = [
   {
-    description: 'Rooster Sauce',
-    link: 'https://roostersauce.bandcamp.com/album/live-ep-the-last-days-of-disco-fries'
+    title: 'Hardwood Heart',
+    embed: 
+      <iframe
+        title="Hardwood Heart"
+        style={{ border: 0, width: '350px', height: '470px' }}
+        src="https://bandcamp.com/EmbeddedPlayer/album=3319738604/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/"
+        seamless>
+        <a href="http://hardwoodheart.bandcamp.com/album/the-longer-road-ep">
+          The Longer Road EP by Hardwood Heart
+        </a>
+      </iframe>,
   },
   {
-    description: 'Hardwood Heart',
-    link: 'https://hardwoodheart.bandcamp.com/album/the-longer-road-ep '
+    title: 'Anything Bagel',
+    embed: 
+      <iframe
+        title="Anything Bagel"
+        style={{ border: 0, width: '350px', height: '470px' }}
+        src="https://bandcamp.com/EmbeddedPlayer/album=3605030031/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/"
+        seamless>
+        <a href="http://anythingbagel.bandcamp.com/album/tormi">
+          Tormi by Tormi
+        </a>
+      </iframe>,
   },
   {
-    description: 'Anything Bagel',
-    link: 'https://anythingbagel.bandcamp.com/album/tormi'
-  },
+    title: 'Secondhand Shenanigans',
+    embed:
+      <iframe
+        title="Secondhand Shenanigans"
+        style={{ border: 0, width: '350px', height: '470px' }}
+        src="https://bandcamp.com/EmbeddedPlayer/album=983656720/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/"
+        seamless>
+        <a href="http://secondhandshenanigans.bandcamp.com/album/operating-from-the-subconscious">
+          Operating from the Subconscious by Secondhand Shenanigans
+        </a>
+      </iframe>,
+  },  
   {
-    description: 'Secondhand Shenanigans',
-    link: 'https://secondhandshenanigans.bandcamp.com/releases'
+    title: 'Emzee & Silas',
+    embed:
+      <iframe
+        title="Emzee & Silas"
+        style={{ border: 0, width: '350px', height: '470px' }}
+        src="https://bandcamp.com/EmbeddedPlayer/track=388941043/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/"
+        seamless>
+        <a href="http://emzeemusik.bandcamp.com/track/spine">
+          Spine by Emzee
+        </a>
+      </iframe>,
   }
 ];
 
@@ -51,7 +87,12 @@ const Recordings = ({ close, article, timeout }) => {
           {liveRecordings.map((r, i) => {
             return (
               <li key={i}>        
-                <a href={r.link} target="_blank">{r.title}</a>
+                <a
+                  href={r.link}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  {r.title}
+                </a>
               </li>
             )
           })}
@@ -101,11 +142,11 @@ const Recordings = ({ close, article, timeout }) => {
       <h2 className="major">Recordings</h2>
 
       <h3>Studio:</h3>
-      <ul className="center">
+      <ul className="content" style={{ listStyle: 'none', paddingLeft: 0 }}>
         {studioRecordings.map((r, i) => {
           return (
-            <li key={i}>        
-              <a href={r.link}>{r.description}</a>
+            <li key={i} className="center">
+              {r.embed}
             </li>
           )
         })}

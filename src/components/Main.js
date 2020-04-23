@@ -6,6 +6,23 @@ import About from './Pages/About';
 import Schedule from './Pages/Schedule';
 import Services from './Pages/Services';
 
+const renderArticles = (close, article, articleTimeout) => {
+  switch (article) {
+    case 'recordings':
+      return <Recordings close={close} article={article} timeout={articleTimeout} />;
+    case 'podcast':
+      return <Podcast close={close} article={article} timeout={articleTimeout} />;
+    case 'about':
+      return <About close={close} article={article} timeout={articleTimeout} />;
+    case 'schedule':
+      return <Schedule close={close} article={article} timeout={articleTimeout} />;
+    case 'services':
+      return <Services close={close} article={article} timeout={articleTimeout} />;
+    default:
+      return null;
+  }
+}
+
 class Main extends React.Component {
   render() {
     let close = (
@@ -28,18 +45,8 @@ class Main extends React.Component {
       <div
         ref={setWrapperRef}
         id="main"
-        style={timeout ? { display: 'flex' } : { display: 'none' }}
-      >
-        <Recordings close={close} article={article} timeout={articleTimeout} />
-
-        <Podcast close={close} article={article} timeout={articleTimeout} />
-
-        <About close={close} article={article} timeout={articleTimeout} />
-
-        <Schedule close={close} article={article} timeout={articleTimeout} />
-
-        <Services close={close} article={article} timeout={articleTimeout} />
-
+        style={timeout ? { display: 'flex' } : { display: 'none' }}>
+        {renderArticles(close, article, articleTimeout)}
       </div>
     )
   }

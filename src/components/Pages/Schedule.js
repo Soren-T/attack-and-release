@@ -15,7 +15,7 @@ const getMetaphor = () => {
 const Schedule = ({ close, article, timeout }) => {
   const [ name, setName ] = useState();
   const [ message, setMessage ] = useState();
-  const [ email, setEmail ] = useState();
+  const [ email, setEmail ] = useState(); // eslint-disable-line no-unused-vars
   const [ metaphor ] = useState(getMetaphor);
 
   const handleForm = (e) => {

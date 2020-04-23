@@ -13,7 +13,7 @@ const Header = props => (
         </div>
         <h1>Attack &amp; Release Sound &amp; Studio</h1>
         <p>
-          Produced by Matt Olson
+          Engineered by Matt Olson
         </p>
       </div>
     </div>

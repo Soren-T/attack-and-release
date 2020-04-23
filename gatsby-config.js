@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Attack & Release Sound & Studio',
     author: 'Soren Thompson',
-    description: 'Sound and Studio produced by Matt Olson',
+    description: 'Sound and Studio engineered by Matt Olson',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -32,6 +32,6 @@ module.exports = {
           families: ['Lato', 'Krona One', "Josefin Sans"]
         }
       }
-    }
+    },
   ],
 }

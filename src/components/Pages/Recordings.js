@@ -75,7 +75,7 @@ const Recordings = ({ close, article, timeout }) => {
     return (
       <React.Fragment>
         <ul className="center video-list">
-          {liveRecordings.map((r, i) => {
+          {recordings.map((r, i) => {
             return (
               <li key={i}>        
                 <a

@@ -1,58 +1,41 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
 
-const studioRecordings = [
+const studioRecordings = [    
+  {
+    title: 'Emzee & Silas',
+    link: 'http://emzeemusik.bandcamp.com/track/only-because-2',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/track=3825144018/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
+  },
+  {
+    title: 'Emzee & Silas Live from Freecycles',
+    link: 'http://emzeemusik.bandcamp.com/album/emzee-silas-live-from-freecycles',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/album=1967543748/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
+  },
   {
     title: 'Hardwood Heart',
-    embed: 
-      <iframe
-        title="Hardwood Heart"
-        style={{ border: 0, width: '350px', height: '470px' }}
-        src="https://bandcamp.com/EmbeddedPlayer/album=3319738604/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/"
-        seamless>
-        <a href="http://hardwoodheart.bandcamp.com/album/the-longer-road-ep">
-          The Longer Road EP by Hardwood Heart
-        </a>
-      </iframe>,
+    link: 'http://hardwoodheart.bandcamp.com/album/the-longer-road-ep',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/album=3319738604/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
   },
   {
     title: 'Anything Bagel',
-    embed: 
-      <iframe
-        title="Anything Bagel"
-        style={{ border: 0, width: '350px', height: '470px' }}
-        src="https://bandcamp.com/EmbeddedPlayer/album=3605030031/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/"
-        seamless>
-        <a href="http://anythingbagel.bandcamp.com/album/tormi">
-          Tormi by Tormi
-        </a>
-      </iframe>,
+    link: 'http://anythingbagel.bandcamp.com/album/tormi',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/album=3605030031/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
   },
   {
     title: 'Secondhand Shenanigans',
-    embed:
-      <iframe
-        title="Secondhand Shenanigans"
-        style={{ border: 0, width: '350px', height: '470px' }}
-        src="https://bandcamp.com/EmbeddedPlayer/album=983656720/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/"
-        seamless>
-        <a href="http://secondhandshenanigans.bandcamp.com/album/operating-from-the-subconscious">
-          Operating from the Subconscious by Secondhand Shenanigans
-        </a>
-      </iframe>,
-  },  
-  {
-    title: 'Emzee & Silas',
-    embed:
-      <iframe
-        title="Emzee & Silas"
-        style={{ border: 0, width: '350px', height: '470px' }}
-        src="https://bandcamp.com/EmbeddedPlayer/track=388941043/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/"
-        seamless>
-        <a href="http://emzeemusik.bandcamp.com/track/spine">
-          Spine by Emzee
-        </a>
-      </iframe>,
+    link: 'http://secondhandshenanigans.bandcamp.com/album/operating-from-the-subconscious',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/album=983656720/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
   }
 ];
 
@@ -60,27 +43,35 @@ const liveRecordings = [
   {
     title: 'Double Dirty Ocelot - Mad For The Money',
     link: "https://www.youtube.com/watch?v=vBIEpiccPBc",
-    embed: 'https://www.youtube.com/embed/vBIEpiccPBc'
-  },
-  {
-    title: 'Ocelot Wizard - Blind',
-    link: 'https://www.youtube.com/watch?v=ydRuvSv4yXI',
-    embed: 'https://www.youtube.com/embed/ydRuvSv4yXI'
+    embed: 'https://www.youtube.com/embed/vBIEpiccPBc',
+    style: { alignSelf: 'center'},
+    bandcamp: false
   },
   {
     title: 'Jesse, The Ocelot - Grow Faster',
     link: 'https://www.youtube.com/watch?v=yM5ShM5Y0Oo',
-    embed: 'https://www.youtube.com/embed/yM5ShM5Y0Oo'
+    embed: 'https://www.youtube.com/embed/yM5ShM5Y0Oo',
+    style: { alignSelf: 'center'},
+    bandcamp: false
   },
   {
-    title: 'Super Cub - Parlor Sessions',
-    link: 'https://www.youtube.com/watch?v=w2dpLgg-_Gg',
-    embed: 'https://www.youtube.com/embed/w2dpLgg-_Gg'
+    title: 'Super Cub at Ponyfest Parlor Sessions',
+    link: 'https://www.youtube.com/channel/UCwKB6PG98bVjU1UjdHfDcJg',
+    embed: 'https://www.youtube.com/embed/w2dpLgg-_Gg',
+    style: { alignSelf: 'center'},
+    bandcamp: false
+  },
+  {
+    title: 'Shahs Live at Freecycles',
+    link: 'http://shahs.bandcamp.com/album/pleasures-etc-live-free-cycles-5-4-18',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/album=1498826153/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/',    
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
   }
 ];
 
 const Recordings = ({ close, article, timeout }) => {  
-  const renderLiveRecordings = () => {
+  const renderRecordings = (recordings) => {
     return (
       <React.Fragment>
         <ul className="center video-list">
@@ -111,18 +102,24 @@ const Recordings = ({ close, article, timeout }) => {
           )}
           renderBottomCenterControls={() => null}
           wrapAround>
-          {liveRecordings.map((r, i) => {
+          {recordings.map((r, i) => {
               return (
-                <div key={i} style={{ display: 'flex', flexDirection: 'column'}}>        
-                  <iframe
-                    style={{ alignSelf: 'center'}}
-                    title={r.title}
-                    width="100%"
-                    height="360"
-                    src={r.embed} 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen>      
-                  </iframe>
+                <div key={i} style={{ display: 'flex', flexDirection: 'column', margin: '5px' }}>        
+                  {r.bandcamp ? (
+                    <iframe
+                      style={r.style}
+                      title={r.title}
+                      src={r.embed} />
+                  ) : (
+                    <iframe
+                      style={r.style}
+                      title={r.title}
+                      width="100%"
+                      height="360"
+                      src={r.embed} 
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen />
+                  )}
                 </div>
               )
             })}
@@ -141,19 +138,11 @@ const Recordings = ({ close, article, timeout }) => {
     >
       <h2 className="major">Recordings</h2>
 
-      <h3>Studio:</h3>
-      <ul className="content" style={{ listStyle: 'none', paddingLeft: 0 }}>
-        {studioRecordings.map((r, i) => {
-          return (
-            <li key={i} className="center">
-              {r.embed}
-            </li>
-          )
-        })}
-      </ul>
+      <h3>Studio:</h3>      
+      {renderRecordings(studioRecordings)}
 
       <h3>Live:</h3>
-      {renderLiveRecordings()}
+      {renderRecordings(liveRecordings)}
       {close}
     </article>
   );

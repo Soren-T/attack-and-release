@@ -3,7 +3,35 @@ import Carousel from 'nuka-carousel';
 
 const studioRecordings = [    
   {
-    title: 'Emzee & Silas',
+    title: 'FUULS - Blood Mouth',
+    link: 'https://fuuls.bandcamp.com/track/blood-mouth',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/track=29295002/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
+  },
+  {
+    title: 'Emzee & Silas - Road',
+    link: 'https://emzeemusik.bandcamp.com/track/road',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/track=117656226/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
+  },
+  {
+    title: 'Emzee & Silas - Run',
+    link: 'https://emzeemusik.bandcamp.com/track/run',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/track=3214838386/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
+  },
+  {
+    title: 'Emzee & Silas - Bear and the Bull',
+    link: 'https://emzeemusik.bandcamp.com/track/bear-and-the-bull-2',
+    embed: 'https://bandcamp.com/EmbeddedPlayer/track=883289638/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/',
+    style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },
+    bandcamp: true
+  },
+  {
+    title: 'Emzee & Silas - Only Because',
     link: 'http://emzeemusik.bandcamp.com/track/only-because-2',
     embed: 'https://bandcamp.com/EmbeddedPlayer/track=3825144018/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/',
     style: { border: "0", width: "350px", height: "470px", alignSelf: 'center' },

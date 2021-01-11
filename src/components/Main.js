@@ -27,6 +27,7 @@ class Main extends React.Component {
   render() {
     let close = (
       <div
+        aria-label='close'
         role='button'
         tabIndex={0}
         className="close"

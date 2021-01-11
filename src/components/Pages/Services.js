@@ -19,6 +19,9 @@ const Services = ({ close, article, timeout }) => (
       <li>        
         Mixing
       </li>
+      <li>        
+        Mastering
+      </li>
     </ul>
     <span className="image main content">
       <img src={studio2} alt="studio2" />

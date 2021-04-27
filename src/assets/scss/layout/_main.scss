@@ -47,7 +47,7 @@
 				display: none;
 			}
 
-			@include breakpoint(small) {
+			@include sm {
 				.video {
 					display: none !important;
 				}
@@ -126,7 +126,7 @@
 
 		}
 
-		@include breakpoint(small) {
+		@include sm {
 			article {
 				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
 				.close {
@@ -155,7 +155,7 @@
 			}
 		}
 
-		@include breakpoint(xsmall) {
+		@include xsm {
 			article {
 				@include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
 			}

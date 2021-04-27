@@ -22,15 +22,15 @@
 			display: block;
 		}
 
-		@include breakpoint(xlarge) {
+		@include xl {
 			padding: 3rem 2rem;
 		}
 
-		@include breakpoint(small) {
+		@include sm {
 			padding: 2rem 1rem;
 		}
 
-		@include breakpoint(xsmall) {
+		@include xsm {
 			padding: 1rem;
 		}
 

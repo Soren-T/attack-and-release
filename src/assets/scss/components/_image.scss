@@ -73,13 +73,13 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include sm {
 			&.main {
 				margin: (_size(element-margin) * 1) 0;
 			}
 		}
 
-		@include breakpoint(xsmall) {
+		@include xsm {
 			&.main {
 				margin: (_size(element-margin) * 0.75) 0;
 			}
